@@ -70,3 +70,9 @@ main {
 .minutagem:hover {
     background-color: rgb(231, 201, 161);
 }
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+}
