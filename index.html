@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer decrescente</title>
+</head>
+<body>
+    <main>
+        <div id="tempo-botao">
+            <div id="tempo">
+                <div class="tempo" id="minutos">00</div>
+                <div class="tempo">:</div>
+                <div class="tempo" id="segundos">00</div>
+            </div>
+            <button onclick="zerar()">Zerar</button>
+        </div>
+
+        <div id="minutagem">
+            <div class="minutagem" onclick="minutagem(5)">5 minutos</div>
+            <div class="minutagem" onclick="minutagem(10)">10 minutos</div>
+            <div class="minutagem" onclick="minutagem(15)">15 minutos</div>
+            <div class="minutagem" onclick="minutagem(20)">20 minutos</div>
+            <div class="minutagem" onclick="minutagem(25)">25 minutos</div>
+            <div class="minutagem" onclick="minutagem(30)">30 minutos</div>
+            <div class="minutagem" onclick="minutagem(45)">45 minutos</div>
+        </div>
+    </main>
+
+    <audio src="midia/som/secret-sound.mp3" id="alarme" preload="auto"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Nunito';
+}
+
+main {
+    background-color: antiquewhite;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#tempo-botao {
+    display: flex;
+    flex-direction: column;
+}
+
+#tempo-botao button {
+    background-color: brown;
+    font-weight: bold;
+    font-size: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+#tempo-botao button:hover {
+    background-color: rgb(194, 67, 67);
+}
+
+#tempo {
+    font-size: 150px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#minutagem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.minutagem {
+    background-color: burlywood;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.minutagem:hover {
+    background-color: rgb(231, 201, 161);
+}
