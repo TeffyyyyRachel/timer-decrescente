@@ -58,7 +58,7 @@ function minutagem(tempo) {
 
         segundosInt -= 1;
         
-    }, 10)}
+    }, 1000)}
 }
 
 
