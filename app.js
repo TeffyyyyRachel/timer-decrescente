@@ -58,7 +58,7 @@ function minutagem(minutos,segundos) {
 
         segundos -= 1;
         
-    }, 100)}
+    }, 1000)}
 }
 
 function zerar() {
