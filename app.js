@@ -20,7 +20,7 @@ function minutagem(tempo) {
         tituloPagina.innerText = '0' + tempo + ':00';
     } else {
         minutosHTML.innerText = tempo;
-        tituloPagina.innerText = tempo;
+        tituloPagina.innerText = tempo + ':00';
     }
 
     var minutosInt = tempo - 1
