@@ -49,11 +49,15 @@ function zerar() {
 }
 
 function pausarContinuar() {
+    var minutosTranscorridos = parseInt(minutosHTML.innerText);
+    var segundosTranscorridos = parseInt(segundosHTML.innerText);
+
+    if (minutosTranscorridos == 0 & segundosTranscorridos == 0) {
+        return;
+    }
+
     if (pausado) {
-        tempoCorrendo = false;
-        var minutosTranscorridos = parseInt(minutosHTML.innerText);
-        var segundosTranscorridos = parseInt(segundosHTML.innerText);
-        
+        tempoCorrendo = false;        
         minutagem(minutosTranscorridos,segundosTranscorridos);
         botaoPause.innerText = 'Pausar';
         pausado = false;
