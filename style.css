@@ -35,8 +35,8 @@ main {
     height: 40px;
     border: none;
     border-radius: 5px;
+    flex: 1;
 }
-
 #tempo-botao button:hover {
     background-color: rgb(194, 67, 67);
 }
@@ -47,6 +47,13 @@ main {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+#botoes {
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
 }
 
 #minutagem {
