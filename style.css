@@ -25,8 +25,17 @@ main {
     flex-direction: column;
 }
 
+
+#tela-cheia {
+    background-color: rgb(78, 52, 52);
+
+    padding: 5px;
+    width: 150px;
+    align-self: center;
+    margin-top: 10px;
+}
+
 #tempo-botao button {
-    background-color: brown;
     font-weight: bold;
     font-size: 20px;
     color: aliceblue;
@@ -55,6 +64,9 @@ main {
     display: flex;
     gap: 10px;
 }
+#botoes > button {
+    background-color: brown;
+}
 
 #minutagem {
     display: flex;
@@ -77,6 +89,11 @@ main {
 
 .minutagem:hover {
     background-color: rgb(231, 201, 161);
+}
+
+.fullscreen-mode {
+    justify-content: center;
+    color: aliceblue;
 }
 
 @media (max-width: 800px) {
