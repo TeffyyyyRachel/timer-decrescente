@@ -8,6 +8,7 @@ var botaoFullscreen = document.getElementById('tela-cheia');
 var tempoCorrendo = false;
 var pausado = false;
 var intervalo;
+var wakeLock = null;
 
 function atualizarDisplay(minutos, segundos) {
     minutosHTML.innerText = minutos < 10 ? '0' + minutos : minutos;
@@ -87,6 +88,8 @@ function telaCheia() {
             divTempo.msRequestFullscreen();
         }
 
+        ativarWakeLock();
+
         if (screen.orientation && screen.orientation.lock) {
             screen.orientation.lock('landscape').catch(err => {
                 console.log("Falha ao mudar para o modo paisagem", err);
@@ -102,5 +105,25 @@ function telaCheia() {
 document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement) {
         divTempo.classList.remove('fullscreen-mode');
+        desativarWakeLock();
     }
 });
+
+async function ativarWakeLock() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log('Wake Lock ativado!');               
+    } catch (err) {
+        console.log('Falha ao ativar o Wake Lock', err);
+        
+    }
+}
+
+function desativarWakeLock() {
+    if (wakeLock !== null) {
+        wakeLock.release().then(() => {
+            console.log('Wake Lock desativado!');
+            wakeLock = null;
+        });
+    }
+}
