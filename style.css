@@ -95,6 +95,9 @@ main {
     justify-content: center;
     color: aliceblue;
 }
+.fullscreen-mode div {
+    font-size: 250px;
+}
 
 @media (max-width: 800px) {
     main {
