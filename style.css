@@ -31,9 +31,9 @@ main {
     font-size: 20px;
     color: aliceblue;
     cursor: pointer;
+    border: 2px solid black;
     
     height: 40px;
-    border: none;
     border-radius: 5px;
     flex: 1;
 }
@@ -59,7 +59,7 @@ main {
 #minutagem {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
 }
 
 .minutagem {
@@ -67,6 +67,7 @@ main {
     text-align: center;
     cursor: pointer;
     font-weight: bold;
+    border: 2px solid black;
 
     height: 20px;
     width: 300px;
