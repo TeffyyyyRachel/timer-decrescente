@@ -45,12 +45,16 @@ function minutagem(minutos,segundos) {
 }
 
 function zerar() {
+    if (confirm("Deseja zerar o contador?")){
+
     clearInterval(intervalo);
     atualizarDisplay(0,0);
     tempoCorrendo = false;
     tituloPagina.innerText = 'Timer decrescente';
     pausado = false;
     botaoPause.innerText = 'Pausar';
+    
+    }
 }
 
 function pausarContinuar() {
