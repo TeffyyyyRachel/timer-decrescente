@@ -131,3 +131,9 @@ function desativarWakeLock() {
         });
     }
 }
+
+window.addEventListener('beforeunload', function (event) {
+    // Exibe uma mensagem no popup de confirmação (o texto pode ser ignorado pelo navegador)
+    event.preventDefault(); // Necessário para alguns navegadores
+    // event.returnValue = ''; // Configuração padrão para exibir o popup
+});
